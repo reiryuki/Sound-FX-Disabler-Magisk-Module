@@ -9,7 +9,7 @@
 - Magisk or KernelSU installed
 
 ## Installation Guide & Download Link
-- Install this module https://www.pling.com/p// via Magisk app or KernelSU app or Recovery if Magisk installed
+- Install this module https://www.pling.com/p/2124638/ via Magisk app or KernelSU app or Recovery if Magisk installed
 - Reboot
 
 ## Optionals
