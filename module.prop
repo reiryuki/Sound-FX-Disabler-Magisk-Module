@@ -1,0 +1,8 @@
+id=SoundFXDisabler
+name=Sound FX Disabler
+version=v0.1
+versionCode=1
+author=Rei Ryuki the Fixer
+description=Disables all sound effects. Ignores audio effects loader. You can also use this module for resetting your built-in Sound FX if there is something wrong with your built-in Sound FX. Just install this module, reboot, then remove this module and reboot again.
+
+

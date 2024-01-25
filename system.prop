@@ -1,0 +1,2 @@
+# disable soundfx
+ro.audio.ignore_effects=true
