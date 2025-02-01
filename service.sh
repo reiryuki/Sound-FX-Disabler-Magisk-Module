@@ -45,6 +45,6 @@ if [ "`realpath $DIR`" == $DIR ]; then
 fi
 
 # audio flinger
-DMAF=`dumpsys media.audio_flinger`
+#DMAF=`dumpsys media.audio_flinger`
 
 

@@ -3,6 +3,7 @@
 ## Descriptions
 - Disables all sound effects
 - Ignores audio effects loader
+- Do not use this if you are using any sound effect and audio effect
 - You can also use this module for resetting your built-in sound effects if there is something wrong with your built-in sound effects. Just install this module, reboot, then remove this module and reboot again.
 
 ## Requirements
@@ -13,13 +14,13 @@
 - Reboot
 
 ## Optionals
-- Global: https://t.me/androidryukimodsdiscussions/60861
+- Global: https://t.me/ryukinotes/35
 
 ## Troubleshootings
-- Global: https://t.me/androidryukimodsdiscussions/29836
+- Global: https://t.me/ryukinotes/34
 
 ## Support & Bug Report
-- https://t.me/androidryukimodsdiscussions/2618
+- https://t.me/ryukinotes/54
 - If you don't do above, issues will be closed immediately
 
 ## Credits and Contributors
@@ -29,6 +30,6 @@
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Sponsors
-- https://t.me/androidryukimodsdiscussions/2619
+- https://t.me/ryukinotes/25
 
 
