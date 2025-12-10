@@ -9,6 +9,8 @@ API=`getprop ro.build.version.sdk`
 
 # prop
 resetprop -n ro.audio.ignore_effects true
+resetprop -n ro.audio.soundfx.dirac false
+resetprop -n ro.feature.dolby_enable false
 
 # restart
 if [ "$API" -ge 24 ]; then
@@ -17,7 +19,8 @@ else
   SERVER=mediaserver
 fi
 killall $SERVER\
- android.hardware.audio@4.0-service-mediatek
+ android.hardware.audio@4.0-service-mediatek\
+ android.hardware.audio.service
 
 # stop
 NAMES="dms-hal-1-0 dms-hal-2-0 dms-v36-hal-2-0 dms-sp-hal-2-0"
@@ -43,8 +46,5 @@ if [ "`realpath $DIR`" == $DIR ]; then
     fi
   done
 fi
-
-# audio flinger
-#DMAF=`dumpsys media.audio_flinger`
 
 

@@ -194,10 +194,25 @@ done
 }
 
 # hide
+NAME=SoundAlive
 APPS="MusicFX AudioFX SoundEnhancement AM3DZireneSound
-      ArkamysAudio AudioFx AudioWizard DiracAudioControlService
+      ArkamysAudio AudioFx AudioWizard DaxUI DolbySound
       daxService OPSoundTuner AudioEffectCenter DolbyAtmos
-      MotoDolbyDax3 MotoDolbyV3 WavesService AudioEffect"
+      MotoDolbyDax3 WavesService AudioEffect DtsAudio
+      ThreeSixtyRASystem DtsUltra DTSXULTRA MiSound
+      DiracAudioControlService_DMP DiracAudioControlService
+      WavesServiceV2
+      `ls $SYSTEM/app | grep $NAME`
+      `ls $SYSTEM/priv-app | grep $NAME`
+      `ls $PRODUCT/app | grep $NAME`
+      `ls $PRODUCT/priv-app | grep $NAME`
+      `ls $MY_PRODUCT/app | grep $NAME`
+      `ls $MY_PRODUCT/priv-app | grep $NAME`
+      `ls $PRODUCT/preinstall | grep $NAME`
+      `ls $SYSTEM_EXT/app | grep $NAME`
+      `ls $SYSTEM_EXT/priv-app | grep $NAME`
+      `ls $VENDOR/app | grep $NAME`
+      `ls $VENDOR/euclid/product/app | grep $NAME`"
 hide_app
 
 # unmount

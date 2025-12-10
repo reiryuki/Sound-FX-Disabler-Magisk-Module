@@ -1,2 +1,3 @@
-# disable soundfx
 ro.audio.ignore_effects=true
+ro.audio.soundfx.dirac=false
+ro.feature.dolby_enable=false
