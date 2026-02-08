@@ -66,6 +66,27 @@ SYSTEM_EXT=`realpath $MIRROR/system_ext`
 ODM=`realpath $MIRROR/odm`
 MY_PRODUCT=`realpath $MIRROR/my_product`
 
+# create
+mkdir -p $MODPATH/system/vendor/bin/hw
+NAMES="vendor.dolby.hardware.dms@1.0-service
+       vendor.dolby.hardware.dms@2.0-service
+       vendor.dolby_sp.hardware.dmssp@2.0-service
+       vendor.dolby_v3_6.hardware.dms360@2.0-service"
+for NAME in $NAMES; do
+  if [ -f $VENDOR/bin/hw/$NAME ]; then
+    touch $MODPATH/system/vendor/bin/hw/$NAME
+  fi
+done
+if [ -d $ODM/bin/hw ] || [ -d $VENDOR/odm/bin/hw ]; then
+  mkdir -p $MODPATH/system/vendor/odm/bin/hw
+fi
+for NAME in $NAMES; do
+  if [ -f $ODM/bin/hw/$NAME ]\
+  || [ -f $VENDOR/odm/bin/hw/$NAME ]; then
+    touch $MODPATH/system/vendor/odm/bin/hw/$NAME
+  fi
+done
+
 # cleaning
 ui_print "- Cleaning..."
 PKGS=`cat $MODPATH/package.txt`

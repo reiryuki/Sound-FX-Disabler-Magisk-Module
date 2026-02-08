@@ -6,6 +6,13 @@ set -x
 
 # var
 API=`getprop ro.build.version.sdk`
+if [ -L $MODPATH/system/vendor ]; then
+  mkdir -p $MODPATH/vendor
+fi
+if [ ! -d $MODPATH/vendor ]\
+|| [ -L $MODPATH/vendor ]; then
+  MODSYSTEM=/system
+fi
 
 # prop
 resetprop -n ro.audio.ignore_effects true
@@ -23,7 +30,8 @@ killall $SERVER\
  android.hardware.audio.service
 
 # stop
-NAMES="dms-hal-1-0 dms-hal-2-0 dms-v36-hal-2-0 dms-sp-hal-2-0"
+NAMES="dms-hal-1-0 dms-hal-2-0
+       dms-v36-hal-2-0 dms-sp-hal-2-0"
 for NAME in $NAMES; do
   stop $NAME
 done
@@ -36,14 +44,7 @@ FILES="$DIR/vendor.dolby_sp.hardware.dmssp@2.0-service
        $DIR/vendor.dolby.hardware.dms@1.0-service"
 if [ "`realpath $DIR`" == $DIR ]; then
   for FILE in $FILES; do
-    if [ -f $FILE ]; then
-      if [ -L $MODPATH/system/vendor ]\
-      && [ -d $MODPATH/vendor ]; then
-        mount -o bind $MODPATH/vendor$FILE $FILE
-      else
-        mount -o bind $MODPATH/system/vendor$FILE $FILE
-      fi
-    fi
+    [ -f $FILE ] && mount -o bind $MODPATH$MODSYSTEM/vendor$FILE $FILE
   done
 fi
 
