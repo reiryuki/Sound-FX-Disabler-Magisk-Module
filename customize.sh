@@ -98,6 +98,7 @@ if [ "$BOOTMODE" == true ]; then
     fi
   done
 fi
+rm -rf $MODPATH/image
 ui_print " "
 
 # function
@@ -121,7 +122,8 @@ for NAME in $NAMES; do
    /persist/magisk/$NAME\
    /data/unencrypted/magisk/$NAME\
    /cache/magisk/$NAME\
-   /cust/magisk/$NAME
+   /cust/magisk/$NAME\
+   /klogdump/magisk/$NAME
 done
 }
 conflict_disable() {

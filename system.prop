@@ -1,3 +1,5 @@
 ro.audio.ignore_effects=true
 ro.audio.soundfx.dirac=false
 ro.feature.dolby_enable=false
+ro.product.lge.globaleffect.dts=false
+ro.lge.globaleffect.dts=false
